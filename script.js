@@ -1,10 +1,14 @@
 
-document.getElementById('warpButton').onclick = function() {
+document.getElementById('tgButton').onclick = function() {
     window.location.href = 'https://t.me/warp_1_1_1_1';
 }
 
 document.getElementById('promoButton').onclick = function() {
     window.location.href = 'https://storage.googleapis.com/amnezia/amnezia.org?m-path=premium&arf=VG755WBZDBAPGGYM';
+}
+
+document.getElementById('warpButton').onclick = function() {
+    window.location.href = 'https://my-other-projects.vercel.app/';
 }
 
 window.addEventListener('DOMContentLoaded', function() {
