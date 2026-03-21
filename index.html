@@ -6,6 +6,7 @@
 	<link rel="icon" href="proton.svg" type="image/x-icon">
 	<link rel="stylesheet" href="styles.css">
 	<script defer src="script.js"></script>
+	<script defer src="quic.js"></script>
   <title>Proton Конвертер</title>
 </head>
 <body>
@@ -50,8 +51,8 @@
 				<span class="radio-fakeradio"></span> Свой вариант
 			</div></label>
 			jc = <textarea id="jc1" class="jc" rows="1" maxlength="3" type="number" placeholder="128"></textarea> 
-			jmin = <textarea id="jmin1" class="jc" rows="1" maxlength="4" type="number" placeholder="1279"></textarea> 
-			jmax = <textarea id="jmax1" class="jc" rows="1" maxlength="4" placeholder="1280"></textarea>
+			jmin = <textarea spellcheck="false" id="jmin1" class="jc" rows="1" maxlength="4" type="number" placeholder="1279"></textarea> 
+			jmax = <textarea spellcheck="false" id="jmax1" class="jc" rows="1" maxlength="4" placeholder="1280"></textarea>
 			<button onclick="" class="randombtn">Случайно</button>
 		</div>
 			<!--
@@ -80,18 +81,19 @@
 	</div>
 					<div class="container3 hidden" id="15awg">
 					<div class="musor1"  style="line-height: 27px;">
-					    I1 = <textarea id="i1" class="jc" rows="1" wrap="off" placeholder="<b 0xc600000...>"></textarea> 
-					<br>I2 = <textarea id="i2" class="jc" rows="1" wrap="off" placeholder="<b 0x...>"></textarea> 
-					<br>I3 = <textarea id="i3" class="jc" rows="1" wrap="off" placeholder="<b 0x...>"></textarea>
-					<br>I4 = <textarea id="i4" class="jc" rows="1" wrap="off" placeholder="<b 0x...>"></textarea>
-					<br>I5 = <textarea id="i5" class="jc" rows="1" wrap="off" placeholder="<b 0x...>"></textarea>
+					    I1 = <textarea spellcheck="false" id="i1" class="jc" rows="1" wrap="off" placeholder="<b 0xc600000...>"></textarea> 
+					<br>I2 = <textarea spellcheck="false" id="i2" class="jc" rows="1" wrap="off" placeholder="<b 0x...>"></textarea> 
+					<br>I3 = <textarea spellcheck="false" id="i3" class="jc" rows="1" wrap="off" placeholder="<b 0x...>"></textarea>
+					<br>I4 = <textarea spellcheck="false" id="i4" class="jc" rows="1" wrap="off" placeholder="<b 0x...>"></textarea>
+					<br>I5 = <textarea spellcheck="false" id="i5" class="jc" rows="1" wrap="off" placeholder="<b 0x...>"></textarea>
 					<button onclick="" class="randombtn">Случайно</button>
+					<button onclick="" class="genbtn" style="margin-top: 15px;">Сгенерировать</button>
 					</div>
 					</div>
 				
 					<div class="container3 hidden" id="15wiresock">
 					<div class="musor1"  style="line-height: 27px;">
-					Id = <textarea id="id" class="jc" rows="1" wrap="off" placeholder="ozon.ru"></textarea><br>
+					Id = <textarea spellcheck="false" id="id" class="jc" rows="1" wrap="off" placeholder="ozon.ru"></textarea><br>
 					Ip = <select name="select" id="ip">
 						<option value="quic"selected>QUIC</option>
 						<option value="dns">DNS</option>
@@ -128,7 +130,18 @@
 			<button id="tgButton" style="max-width: 400px;"><span class="button__text">Telegram</span></button>
 			<button id="promoButton" class="glow-on-hover"><span class="button__text">Amnezia <a style="color: #A40059">Premium<a></span></button>
 			<button id="warpButton" style="max-width: 400px;"><span class="button__text">Другие проекты</span></button>
-			<div id="info1">Сделано на основе zaeboba.github.io/page/archive/clash.html</div>
+			<div id="info1">    Сделано на основе ресурсов 
+    <a href="https://zaeboba.github.io/page/archive/clash.html" target="_blank" rel="noopener noreferrer">zaeboba</a> 
+    и 
+    <a href="https://sageptr.github.io/mini_quic_generator/" target="_blank" rel="noopener noreferrer">sageptr</a></div>
 		</div>
+		<div id="Modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <p align="center">Введите домен</p>
+	<textarea spellcheck="false" id="domain" class="jc" rows="1" wrap="off" placeholder="example.com"></textarea> 
+    <button id="selectDomain" style="margin-bottom:0px">Подтвердить</button>
+  </div>
+</div>
 	</div>
 </body></html>
