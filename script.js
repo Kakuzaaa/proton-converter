@@ -128,7 +128,7 @@ document.querySelectorAll('.randombtn')[1].onclick = function() {
 };
 
 document.querySelectorAll('.randombtn')[2].onclick = function() {
-  const domains = ['apteka.ru', 'mail.ru', 'psbank.ru', 'lenta.ru', 'www.pochta.ru', 'rzd.ru', 'rutube.ru', 'gosuslugi.ru'];
+  const domains = ['apteka.ru', 'psbank.ru', 'lenta.ru', 'www.pochta.ru', 'rzd.ru', 'rutube.ru', 'gosuslugi.ru'];
   const randomDomain = domains[Math.floor(Math.random() * domains.length)];
   document.getElementById('id').value = randomDomain;
   
